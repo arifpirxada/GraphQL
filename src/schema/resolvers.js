@@ -84,12 +84,13 @@ const resolvers = {
           console.log("User has been created!")
         }
 
-        return "user"
+        return user
       } catch (error) {
         console.error(error);
         throw new Error('Error occured while creating user');
       }
     },
+
     updateUser: async (parent, args) => {
       try {
         const userData = await getData(path.join(__dirname, '../data', 'users.json'));
@@ -97,12 +98,13 @@ const resolvers = {
         let returnUser;
         const updatedUserData = userData.map(user => {
           if (user.id == userToBeUpdated.id) {
-            returnUser = user;
-            return {
+            let curr_user = {
               ...user,
               firstName: userToBeUpdated.firstName,
               lastName: userToBeUpdated.lastName
             };
+            returnUser = curr_user;
+            return curr_user;
           } else {
             return user;
           }
@@ -117,7 +119,52 @@ const resolvers = {
         console.error(error);
         throw new Error('Error occured while updating user');
       }
-    }
+    },
+
+    createTodo: async (parent, args) => {
+      try {
+        const todoData = await getData(path.join(__dirname, '../data', 'todos.json'));
+        const todo = args.input;
+        todo.id = todoData.length + 2;
+        todoData.push(todo)
+
+        if (setData(path.join(__dirname, '../data', 'todos.json'), todoData)) {
+          console.log("Todo has been created!")
+        }
+        return todo
+      } catch (error) {
+        console.error(error);
+        throw new Error('Error occured while creating Todo');
+      }
+    },
+
+    updateTodo: async (parent, args) => {
+      try {
+        const todoData = await getData(path.join(__dirname, '../data', 'todos.json'));
+        let todoToBeUpdated = args.input
+        let returnTodo;
+        const updatedTodoData = todoData.map(todo => {
+          if (todo.id == todoToBeUpdated.id) {
+            let curr_todo = {
+              ...todo,
+              todo: todoToBeUpdated.todo
+            };
+            returnTodo = curr_todo;
+            return curr_todo;
+          } else {
+            return todo;
+          }
+        });
+        if (setData(path.join(__dirname, '../data', 'todos.json'), updatedTodoData)) {
+          console.log("Todo has been updated!")
+        }
+
+        return returnTodo;
+      } catch (error) {
+        console.error(error);
+        throw new Error('Error occured while updating Todo');
+      }
+    },
   }
 };
 

@@ -42,9 +42,21 @@ const typeDefs = gql`
         lastName: String!
     }
 
+    input TodoInput {
+        todo: String!
+        userId: ID!
+    }
+
+    input UpdateTodoInput {
+        todo: String!
+        id: ID!
+    }
+
     type Mutation {
         createUser(input: CreateUserInput): User
         updateUser(input: UpdateUserNameInput): User
+        createTodo(input: TodoInput): Todos
+        updateTodo(input: UpdateTodoInput): Todos
     }
 `;
 

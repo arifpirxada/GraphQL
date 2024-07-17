@@ -178,5 +178,15 @@
         "todo": "Go to the gym",
         "completed": true,
         "userId": 142
+    },
+    {
+        "todo": "test todo",
+        "userId": "15",
+        "id": 32
+    },
+    {
+        "todo": "Updated test todo",
+        "userId": "15",
+        "id": 33
     }
 ]
