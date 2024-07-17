@@ -98,5 +98,41 @@
         "email": "liam.garcia@x.dummyjson.com",
         "password": "liamgpass",
         "image": "https://dummyjson.com/icon/liamg/128"
+    },
+    {
+        "firstName": "first",
+        "lastName": "test",
+        "age": 10,
+        "email": "test@gmail.com",
+        "password": "password",
+        "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
+        "id": 12
+    },
+    {
+        "firstName": "secondUpdated",
+        "lastName": "testUpdated",
+        "age": 10,
+        "email": "secondTest@gmail.com",
+        "password": "password",
+        "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
+        "id": 13
+    },
+    {
+        "firstName": "thirdUpdated",
+        "lastName": "testUpdated",
+        "age": 10,
+        "email": "thirdTest@gmail.com",
+        "password": "password",
+        "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
+        "id": 14
+    },
+    {
+        "firstName": "fourthUpdated",
+        "lastName": "testUpdated",
+        "age": 10,
+        "email": "fourthTest@gmail.com",
+        "password": "password",
+        "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
+        "id": 15
     }
 ]
