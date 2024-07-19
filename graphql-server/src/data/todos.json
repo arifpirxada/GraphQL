@@ -170,23 +170,25 @@
     {
         "id": 29,
         "todo": "Have a photo session with some friends",
-        "completed": true,
+        "completed": false,
         "userId": 91
     },
     {
         "id": 30,
         "todo": "Go to the gym",
-        "completed": true,
+        "completed": false,
         "userId": 142
     },
     {
         "todo": "test todo",
         "userId": "15",
+        "completed": false,
         "id": 32
     },
     {
         "todo": "Updated test todo",
         "userId": "15",
+        "completed": false,
         "id": 33
     }
 ]
