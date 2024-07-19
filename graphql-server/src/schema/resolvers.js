@@ -126,6 +126,7 @@ const resolvers = {
         const todoData = await getData(path.join(__dirname, '../data', 'todos.json'));
         const todo = args.input;
         todo.id = todoData.length + 2;
+        todo.completed = false
         todoData.push(todo)
 
         if (setData(path.join(__dirname, '../data', 'todos.json'), todoData)) {
